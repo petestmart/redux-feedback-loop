@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class Comments extends Component {
     render() {
         return (
-            <p>Comments Component Placeholder</p>
+            
+            <div>
+                <h2>Any comments you want to leave?</h2>
+                <input onChange={this.handleChange} placeholder="Comments" />
+                <button>Next</button>
+            </div>
         )
     }
 }
 
-export default Comments;
+export default connect()(Comments);
