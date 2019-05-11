@@ -20,6 +20,9 @@ const finalSubmitReducer = (state = [], action) => {
     if (action.type === 'ADD_SUPPORT'){
         return [...state, action.payload]
     }
+    if (action.type === 'ADD_COMMENT'){
+        return [...state, action.payload]
+    }
     return state;
 };
 
