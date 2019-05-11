@@ -18,7 +18,7 @@ class Comments extends Component {
     handleChange = (event) => {
         console.log('comments', event.target.value)
         this.setState({
-            comment: event.target.value
+            comments: event.target.value
         })
     }
 
