@@ -9,10 +9,14 @@ import logger from 'redux-logger';
 import {createStore, combineReducers, applyMiddleware } from 'redux';
 import {Provider} from 'react-redux';
 
+// Array of all of the answers from each component
+const finalSubmitReducer = (state = [], action) => {
+    if(action.type === '')
+};
 
 const storeInstance = createStore(
     combineReducers({
-
+        finalSubmitReducer
     }),
     applyMiddleware(logger)
 );
