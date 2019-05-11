@@ -5,6 +5,7 @@ import Understanding from '../Understanding/Understanding';
 import Feelings from '../Feelings/Feelings';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
+import Review from '../Review/Review';
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
         <Understanding />
         <Support />
         <Comments />
+        <Review />
       </div>
     );
   }

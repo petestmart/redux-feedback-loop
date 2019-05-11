@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Support extends Component {
     render() {
         return (
-            <h1>Support Component Placeholder</h1>
+            <p>Support Component Placeholder</p>
         )
     }
 }
