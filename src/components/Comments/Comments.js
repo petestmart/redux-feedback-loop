@@ -15,6 +15,7 @@ class Comments extends Component {
     }
 
     handleChange = (event) => {
+        console.log('comments', event.target.value)
         this.setState({
             newFeeling: event.target.value
         })
@@ -27,7 +28,7 @@ class Comments extends Component {
             <div>
                 <h2>Any comments you want to leave?</h2>
                 <input 
-                onChange={text => this.setState({text})} 
+                onChange={this.handleChange} 
                 placeholder="Comments" 
                 value={this.state.text}
                 />

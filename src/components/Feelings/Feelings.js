@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NumericInput from 'react-numeric-input';
+// import NumericInput from 'react-numeric-input';
 import { connect } from 'react-redux';
 
 
@@ -15,6 +15,7 @@ class Feelings extends Component {
     }
 
     handleChange = (event) => {
+        console.log('feelings', event.target.value)
         this.setState({
             newFeeling: event.target.value
         })

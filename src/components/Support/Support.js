@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NumericInput from 'react-numeric-input';
+// import NumericInput from 'react-numeric-input';
 import { connect } from 'react-redux';
 
 class Support extends Component {
@@ -14,7 +14,7 @@ class Support extends Component {
     }
 
     handleChange = (event) => {
-        // console.log('in Support', event.target.value)
+        console.log('support', event.target.value)
         this.setState({
             newFeeling: event.target.value
         })
