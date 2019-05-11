@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NumericInput from 'react-numeric-input';
 import {connect} from 'react-redux';
 
+
 class Feelings extends Component {
 
     addFeelings = (number) => {
