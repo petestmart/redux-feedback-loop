@@ -14,6 +14,9 @@ const finalSubmitReducer = (state = [], action) => {
     if (action.type === 'ADD_FEELINGS'){
         return [...state, action.payload];
     }
+    if (action.type === 'ADD_UNDERSTANDING'){
+        return [...state, action.payload]
+    }
     return state;
 };
 
