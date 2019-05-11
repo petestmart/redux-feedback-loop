@@ -11,7 +11,10 @@ import {Provider} from 'react-redux';
 
 // Array of all of the answers from each component
 const finalSubmitReducer = (state = [], action) => {
-    if(action.type === '')
+    if (action.type === 'ADD_FEELINGS'){
+        return [...state, action.payload];
+    }
+    return state;
 };
 
 const storeInstance = createStore(
