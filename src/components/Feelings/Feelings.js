@@ -6,19 +6,19 @@ import { connect } from 'react-redux';
 class Feelings extends Component {
 
     state = {
-        newFeeling: ''
+        feeling: ''
     }
 
     addFeelings = (number) => {
         number.preventDefault();
-        console.log('f', number.target.value);
-        this.props.dispatch({ type: 'ADD_FEELINGS', payload: number.target.value })
+        console.log('f', this.state);
+        this.props.dispatch({ type: 'ADD_FEELINGS', payload: this.state })
     }
 
     handleChange = (event) => {
         console.log('feelings', event.target.value)
         this.setState({
-            newFeeling: event.target.value
+            feeling: event.target.value
         })
     }
 

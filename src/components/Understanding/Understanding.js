@@ -5,19 +5,19 @@ import { connect } from 'react-redux';
 class Understanding extends Component {
 
     state = {
-        newUnderstanding: ''
+        understanding: ''
     }
 
     addUnderstanding = (number) => {
         number.preventDefault();
-        console.log('u', number);
-        this.props.dispatch({ type: 'ADD_UNDERSTANDING', payload: number })
+        console.log('u', this.state);
+        this.props.dispatch({ type: 'ADD_UNDERSTANDING', payload: this.state })
     }
 
     handleChange = (event) => {
         console.log('understanding', event.target.value)
         this.setState({
-            newUnderstanding: event.target.value
+            understanding: event.target.value
         })
     }
 

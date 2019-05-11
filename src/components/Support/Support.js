@@ -5,19 +5,19 @@ import { connect } from 'react-redux';
 class Support extends Component {
 
     state = {
-        newSupport: ''
+        support: ''
     }
 
     addSupport = (number) => {
         number.preventDefault();
-        console.log('s', number);
-        this.props.dispatch({ type: 'ADD_SUPPORT', payload: number })
+        console.log('s', this.state);
+        this.props.dispatch({ type: 'ADD_SUPPORT', payload: this.state })
     }
 
     handleChange = (event) => {
         console.log('support', event.target.value)
         this.setState({
-            newFeeling: event.target.value
+            support: event.target.value
         })
     }
 

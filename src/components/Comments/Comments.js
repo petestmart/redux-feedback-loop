@@ -6,19 +6,19 @@ import { connect } from 'react-redux';
 class Comments extends Component {
 
     state = {
-        newComment: ''
+        comments: ''
     }
 
     addFeedback = (event) => {
         event.preventDefault();
-        console.log('c', this.state.newComment);
-        this.props.dispatch({ type: 'ADD_COMMENT', payload: this.state.newComment })
+        console.log('c', this.state);
+        this.props.dispatch({ type: 'ADD_COMMENT', payload: this.state })
     }
 
     handleChange = (event) => {
         console.log('comments', event.target.value)
         this.setState({
-            newFeeling: event.target.value
+            comment: event.target.value
         })
     }
 
