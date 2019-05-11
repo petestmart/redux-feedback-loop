@@ -6,15 +6,18 @@ import registerServiceWorker from './registerServiceWorker';
 import logger from 'redux-logger';
 
 // Redux
-import {createStore, combineReducers, applyMiddleware } from 'redux';
-import {Provider} from 'react-redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
 
 // Array of all of the answers from each component
 const finalSubmitReducer = (state = [], action) => {
-    if (action.type === 'ADD_FEELINGS'){
+    if (action.type === 'ADD_FEELINGS') {
         return [...state, action.payload];
     }
-    if (action.type === 'ADD_UNDERSTANDING'){
+    if (action.type === 'ADD_UNDERSTANDING') {
+        return [...state, action.payload]
+    }
+    if (action.type === 'ADD_SUPPORT'){
         return [...state, action.payload]
     }
     return state;

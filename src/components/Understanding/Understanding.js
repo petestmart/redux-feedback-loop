@@ -19,11 +19,17 @@ class Understanding extends Component {
         })
     }
 
-    render(){
-        return(
+    handleChange = (event) => {
+        this.setState({
+            newFeeling: event.target.value
+        })
+    }
+
+    render() {
+        return (
             <div>
                 <h2>How well are you understanding the content?</h2>
-                <NumericInput min={0} max={5} placeholder="Number 1 through 5" />
+                <NumericInput onChange={this.handleChange} min={0} max={5} placeholder="Number 1 through 5" />
                 <button>Next</button>
             </div>
         )

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import NumericInput from 'react-numeric-input';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 
 class Feelings extends Component {
@@ -11,7 +11,7 @@ class Feelings extends Component {
 
     addFeelings = (number) => {
         console.log(number);
-        this.props.dispatch({type: 'ADD_FEELINGS', payload: number})
+        this.props.dispatch({ type: 'ADD_FEELINGS', payload: number })
     }
 
     handleChange = (event) => {
@@ -23,9 +23,9 @@ class Feelings extends Component {
     render() {
         return (
             <div>
-            <h2>How are you feeling today?</h2>
-            <NumericInput onChange={this.handleChange} min={0} max={5} placeholder="Number 1 through 5" /> 
-            <button>Next</button>
+                <h2>How are you feeling today?</h2>
+                <NumericInput onChange={this.handleChange} min={0} max={5} placeholder="Number 1 through 5" />
+                <button>Next</button>
             </div>
         )
     }
