@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { combineReducers } from 'redux';
 
 class Feelings extends Component {
     render() {
@@ -7,5 +8,7 @@ class Feelings extends Component {
         )
     }
 }
+
+
 
 export default Feelings;
