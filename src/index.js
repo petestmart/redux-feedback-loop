@@ -9,6 +9,13 @@ import logger from 'redux-logger';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 
+const feedbackReducer = (state = [], action) => {
+    if (action.type === 'SET_FEEDBACK') {
+        return action.payload
+    }
+    return state;
+}
+
 // Array of all of the answers from each component
 const finalSubmitReducer = (state = [], action) => {
     if (action.type === 'ADD_FEELINGS') {
@@ -28,6 +35,7 @@ const finalSubmitReducer = (state = [], action) => {
 
 const storeInstance = createStore(
     combineReducers({
+        feedbackReducer,
         finalSubmitReducer
     }),
     applyMiddleware(logger)
