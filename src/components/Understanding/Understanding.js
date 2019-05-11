@@ -29,7 +29,11 @@ class Understanding extends Component {
         return (
             <div>
                 <h2>How well are you understanding the content?</h2>
-                <NumericInput onChange={this.handleChange} min={0} max={5} placeholder="Number 1 through 5" />
+                <input
+                    type="number"
+                    onChange={this.handleChange}
+                    min="1" max="5"
+                    placeholder="1 through 5" />
                 <button>Next</button>
             </div>
         )
