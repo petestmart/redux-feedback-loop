@@ -14,7 +14,8 @@ class Feelings extends Component {
         return (
             <div>
             <h2>How are you feeling today?</h2>
-            <NumericInput min={0} max={5} placeholder="Number 1 through 5" />
+            <NumericInput min={0} max={5} placeholder="Number 1 through 5" /> 
+            <button>Next</button>
             </div>
         )
     }
