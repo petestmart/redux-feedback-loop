@@ -9,9 +9,10 @@ class Comments extends Component {
         newComment: ''
     }
 
-    addComment = (comment) => {
-        console.log(comment);
-        this.props.dispatch({ type: 'ADD_COMMENT', payload: comment })
+    addFeedback = (event) => {
+        event.preventDefault();
+        console.log('c', this.state.newComment);
+        this.props.dispatch({ type: 'ADD_COMMENT', payload: this.state.newComment })
     }
 
     handleChange = (event) => {
@@ -24,15 +25,17 @@ class Comments extends Component {
 
     render() {
         return (
-            
+
             <div>
                 <h2>Any comments you want to leave?</h2>
-                <input 
-                onChange={this.handleChange} 
-                placeholder="Comments" 
-                value={this.state.text}
-                />
-                <button>Next</button>
+                <form onSubmit={this.addFeedback}>
+                    <input
+                        onChange={this.handleChange}
+                        placeholder="Comments"
+                        value={this.state.text}
+                    />
+                    <button type="submit"  >Submit Feedback</button>
+                </form>
             </div>
         );
     }

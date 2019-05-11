@@ -9,7 +9,8 @@ class Understanding extends Component {
     }
 
     addUnderstanding = (number) => {
-        console.log(number);
+        number.preventDefault();
+        console.log('u', number);
         this.props.dispatch({ type: 'ADD_UNDERSTANDING', payload: number })
     }
 
@@ -24,12 +25,14 @@ class Understanding extends Component {
         return (
             <div>
                 <h2>How well are you understanding the content?</h2>
-                <input
-                    type="number"
-                    onChange={this.handleChange}
-                    min="1" max="5"
-                    placeholder="1 through 5" />
-                <button>Next</button>
+                <form onSubmit={this.addUnderstanding}>
+                    <input
+                        type="number"
+                        onChange={this.handleChange}
+                        min="1" max="5"
+                        placeholder="1 through 5" />
+                    <button type="submit" >Next</button>
+                </form>
             </div>
         )
     }

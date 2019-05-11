@@ -10,8 +10,9 @@ class Feelings extends Component {
     }
 
     addFeelings = (number) => {
-        console.log(number);
-        this.props.dispatch({ type: 'ADD_FEELINGS', payload: number })
+        number.preventDefault();
+        console.log('f', number.target.value);
+        this.props.dispatch({ type: 'ADD_FEELINGS', payload: number.target.value })
     }
 
     handleChange = (event) => {
@@ -25,12 +26,14 @@ class Feelings extends Component {
         return (
             <div>
                 <h2>How are you feeling today?</h2>
-                <input 
-                    type="number"
-                    onChange={this.handleChange} 
-                    min="1" max="5"
-                    placeholder="1 through 5" />
-                <button>Next</button>
+                <form onSubmit={this.addFeelings}>
+                    <input
+                        type="number"
+                        onChange={this.handleChange}
+                        min="1" max="5"
+                        placeholder="1 through 5" />
+                    <button type="submit">Next</button>
+                </form>
             </div>
         )
     }

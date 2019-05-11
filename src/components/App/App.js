@@ -6,7 +6,7 @@ import Feelings from '../Feelings/Feelings';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
-import Admin from '../Admin/Admin';
+// import Admin from '../Admin/Admin';
 
 
 class App extends Component {
@@ -39,7 +39,7 @@ class App extends Component {
         <Support />
         <Comments />
         <Review />
-        <Admin />
+        {/* <Admin /> */}
       </div>
     );
   }
