@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-class Understanding extends Component {
+class Feelings extends Component {
     render() {
         return (
-            
+            <h1>Feelings Component Placeholder</h1>
         )
     }
 }

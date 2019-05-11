@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-class Understanding extends Component {
+class Support extends Component {
     render() {
         return (
-            
+            <h1>Support Component Placeholder</h1>
         )
     }
 }
