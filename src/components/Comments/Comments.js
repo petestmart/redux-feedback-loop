@@ -9,12 +9,16 @@ class Comments extends Component {
         comments: ''
     }
 
+    // Add comments to feedback and triggers POST request to send all data to server
     addFeedback = (event) => {
         event.preventDefault();
         console.log('c', this.state);
         this.props.dispatch({ type: 'ADD_COMMENT', payload: this.state })
     }
 
+    
+
+    // Handle typing events
     handleChange = (event) => {
         console.log('comments', event.target.value)
         this.setState({
