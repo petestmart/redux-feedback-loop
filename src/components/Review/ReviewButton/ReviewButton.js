@@ -1,14 +1,50 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import axios from 'axios';
+// import { withRouter } from "react-router-dom"
+
 
 class ReviewButton extends Component {
-    render () {
+
+
+    // trigger POST request to send all data to server
+    // POST request
+    submitFeedback = (event) => {
+        console.log('in POST', this.props.reduxState.finalSubmitReducer)
+        axios.post('/feedback', this.props.reduxState.finalSubmitReducer)
+            .then(response => {
+                // this.props.history.push('/');
+            })
+            .catch(err => {
+                alert(err)
+            })
+    }
+
+    render() {
         return (
-            <button>Incomplete</button>
+            <>
+            <div>
+                <button>Incomplete</button>
+            </div>
+            <div>
+                <button onClick={this.submitFeedback}>Confirm</button>
+            </div>
+            </>
         )
     }
 
 
 } // End class ReviewButton
 
-export default ReviewButton;
+const mapStateToProps = (reduxState) => {
+    // this.props.reduxState
+    return {
+        reduxState
+    }
+}
+
+// const connectedReview = connect(mapStateToProps)(ReviewButton)
+
+// export default withRouter(connectedReview)(ReviewButton)
+
+export default connect(mapStateToProps)(ReviewButton);
