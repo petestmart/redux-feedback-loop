@@ -61,7 +61,7 @@ class App extends Component {
           <Route path='/support' component={Support} />
           <Route path='/comments' component={Comments} />
           <Route path='/success' component={Success} />
-          {/* <Admin /> */}
+          
         </Router>
         <Review />
       </div>
