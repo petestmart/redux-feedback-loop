@@ -9,6 +9,13 @@ import logger from 'redux-logger';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 
+const initialFeedback = {
+    feeling: '',
+    understanding: '',
+    support: '',
+    comments: ''
+}
+
 const feedbackReducer = (state = [], action) => {
     if (action.type === 'SET_FEEDBACK') {
         return action.payload
@@ -17,19 +24,20 @@ const feedbackReducer = (state = [], action) => {
 }
 
 // Array of all of the answers from each component
-const finalSubmitReducer = (state = [], action) => {
+const finalSubmitReducer = (state = initialFeedback, action) => {
     if (action.type === 'ADD_FEELINGS') {
-        return [...state, action.payload];
+        return { ...state, feeling: action.payload };
     }
     if (action.type === 'ADD_UNDERSTANDING') {
-        return [...state, action.payload]
+        return { ...state, understanding: action.payload };
     }
-    if (action.type === 'ADD_SUPPORT'){
-        return [...state, action.payload]
+    if (action.type === 'ADD_SUPPORT') {
+        return { ...state, support: action.payload };
     }
-    if (action.type === 'ADD_COMMENT'){
-        return [...state, action.payload]
+    if (action.type === 'ADD_COMMENTS') {
+        return { ...state, comments: action.payload };
     }
+
     return state;
 };
 

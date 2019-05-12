@@ -11,8 +11,8 @@ class Feelings extends Component {
 
     addFeelings = (number) => {
         number.preventDefault();
-        console.log('f', this.state);
-        this.props.dispatch({ type: 'ADD_FEELINGS', payload: this.state })
+        console.log('f', this.state.feeling);
+        this.props.dispatch({ type: 'ADD_FEELINGS', payload: this.state.feeling })
     }
 
     handleChange = (event) => {

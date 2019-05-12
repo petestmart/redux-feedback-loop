@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import axios from 'axios';
+
 // import { TextInput } from 'react-native-paper'
 
 
@@ -9,13 +11,26 @@ class Comments extends Component {
         comments: ''
     }
 
-    // Add comments to feedback and triggers POST request to send all data to server
+    // Add comments to feedback
     addFeedback = (event) => {
         event.preventDefault();
         console.log('c', this.state);
-        this.props.dispatch({ type: 'ADD_COMMENT', payload: this.state })
-    }
+        this.props.dispatch({ type: 'ADD_COMMENTS', payload: this.state.comments })
+        
+    } // end function addFeedback
 
+    // trigger POST request to send all data to server
+    // POST request
+    submitFeedback = (event) => {
+        console.log('in POST', this.props.reduxState.finalSubmitReducer)
+        axios.post('/feedback', this.props.reduxState.finalSubmitReducer)
+            .then(response => {
+                // this.props.history.push('/');
+            })
+            .catch(err => {
+                alert(err)
+            })
+    }
     
 
     // Handle typing events
@@ -40,9 +55,19 @@ class Comments extends Component {
                     />
                     <button type="submit"  >Submit Feedback</button>
                 </form>
+                <div>
+                    <button onClick={this.submitFeedback}>Confirm</button>
+                </div>
             </div>
         );
     }
 }
 
-export default connect()(Comments);
+const mapStateToProps = (reduxState) => {
+    // this.props.reduxState
+    return {
+        reduxState
+    }
+}
+
+export default connect(mapStateToProps)(Comments);

@@ -10,8 +10,8 @@ class Support extends Component {
 
     addSupport = (number) => {
         number.preventDefault();
-        console.log('s', this.state);
-        this.props.dispatch({ type: 'ADD_SUPPORT', payload: this.state })
+        console.log('s', this.state.support);
+        this.props.dispatch({ type: 'ADD_SUPPORT', payload: this.state.support })
     }
 
     handleChange = (event) => {

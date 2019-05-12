@@ -10,8 +10,8 @@ class Understanding extends Component {
 
     addUnderstanding = (number) => {
         number.preventDefault();
-        console.log('u', this.state);
-        this.props.dispatch({ type: 'ADD_UNDERSTANDING', payload: this.state })
+        console.log('u', this.state.understanding);
+        this.props.dispatch({ type: 'ADD_UNDERSTANDING', payload: this.state.understanding })
     }
 
     handleChange = (event) => {

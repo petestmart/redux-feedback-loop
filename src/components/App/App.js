@@ -6,6 +6,7 @@ import Feelings from '../Feelings/Feelings';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
+import {connect} from 'react-redux';
 // import Admin from '../Admin/Admin';
 
 
@@ -15,10 +16,16 @@ class App extends Component {
     this.refreshFeedbackData();
   }
 
-  // POST request
-  submitFeedback = (event) => {
-    axios.post('/artist', {})
-  }
+  // // POST request
+  // submitFeedback = (event) => {
+  //   axios.post('/feedback', (this.props.reduxState.finalSubmitReducer) )
+  //   .then( response => {
+  //     this.props.history.push('/');
+  //   })
+  //   .catch( err => {
+  //     alert(err)
+  //   })
+  // }
 
   // GET request
   refreshFeedbackData = () => {
@@ -42,7 +49,8 @@ class App extends Component {
         <Feelings />
         <Understanding />
         <Support />
-        <Comments />
+        <Comments 
+          />
         <Review />
         {/* <Admin /> */}
       </div>
@@ -50,4 +58,11 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (reduxState) => {
+  // this.props.reduxState
+  return {
+    reduxState
+  }
+}
+
+export default connect(mapStateToProps)(App);

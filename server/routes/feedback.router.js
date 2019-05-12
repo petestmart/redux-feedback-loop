@@ -4,6 +4,20 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool.js');
 
+// GET Route
+router.get('/', (req, res) => {
+    const sqlText = `SELECT * FROM feedback ORDER BY id;`;
+    pool.query(sqlText)
+        .then((result) => {
+            console.log(`Back from DB:`, result );
+            res.send(result.rows);
+        })
+        .catch((error) => {
+            console.log(`Error making database query ${sqlText}`, error);
+            res.sendStatus(500);
+        })
+}) // End GET Route
+
 // POST Route
 router.post('/', (req, res) => {
     let feedbackData = req.body;
@@ -19,7 +33,7 @@ router.post('/', (req, res) => {
             console.log(`Error making database ${sqlText}`, error);
             res.sendStatus(500);
         })
-}); // end POST Route
+}); // End POST Route
 
 
 
