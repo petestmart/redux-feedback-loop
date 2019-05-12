@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import NumericInput from 'react-numeric-input';
 import { connect } from 'react-redux';
-import { HashRouter as Router, Link } from 'react-router-dom';
+// import { HashRouter as Router, Link } from 'react-router-dom';
 
 
 class Feelings extends Component {

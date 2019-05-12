@@ -7,15 +7,17 @@ import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
 import { connect } from 'react-redux';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
+// import { withRouter } from 'react-router';
 // import Admin from '../Admin/Admin';
 
+// const connectedApp = connect(mapStateToProps)(App)
 
 class App extends Component {
 
   componentDidMount() {
     this.refreshFeedbackData()
-    // this.returnHome()
+    this.returnHome()
   }
   
   returnHome = () => {

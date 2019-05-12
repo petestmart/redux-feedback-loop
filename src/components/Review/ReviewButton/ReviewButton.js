@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
-// import { withRouter } from "react-router-dom"
+// import { withRouter } from "react-router"
 
 
 class ReviewButton extends Component {
@@ -21,16 +21,26 @@ class ReviewButton extends Component {
     }
 
     render() {
-        return (
-            <>
-            <div>
-                <button>Incomplete</button>
-            </div>
-            <div>
-                <button onClick={this.submitFeedback}>Confirm</button>
-            </div>
-            </>
-        )
+
+        let finSubRed = this.props.reduxState.finalSubmitReducer;
+
+        if ((finSubRed.feeling &&
+            finSubRed.understanding &&
+            finSubRed.support &&
+            finSubRed.comments) === ('' || "")) {
+            return (
+                <div>
+                    <button>Incomplete</button>
+                </div>)
+        }
+        
+            return (
+                <div>
+                    <button onClick={this.submitFeedback}>Confirm</button>
+                </div>)
+        
+
+
     }
 
 
