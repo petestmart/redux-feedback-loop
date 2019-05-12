@@ -53,7 +53,7 @@ class Comments extends Component {
                         placeholder="Comments"
                         value={this.state.text}
                     />
-                    <button type="submit"  >Add Comments</button>
+                    <button type="submit" >Add Comments</button>
                 </form>
                 <br />
                 
