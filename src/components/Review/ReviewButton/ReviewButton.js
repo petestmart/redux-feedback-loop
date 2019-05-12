@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
-// import { withRouter } from "react-router"
+import { withRouter } from "react-router"
 
 
 class ReviewButton extends Component {
@@ -18,6 +18,12 @@ class ReviewButton extends Component {
             .catch(err => {
                 alert(err)
             })
+        this.successPage();
+    }
+
+    successPage = () => {
+        
+        this.props.history.push('/success')
     }
 
     render() {
@@ -57,4 +63,4 @@ const mapStateToProps = (reduxState) => {
 
 // export default withRouter(connectedReview)(ReviewButton)
 
-export default connect(mapStateToProps)(ReviewButton);
+export default withRouter(connect(mapStateToProps)(ReviewButton));

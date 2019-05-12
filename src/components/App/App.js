@@ -6,6 +6,7 @@ import Feelings from '../Feelings/Feelings';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
+import Success from '../Success/Success';
 import { connect } from 'react-redux';
 import { HashRouter as Router, Route } from 'react-router-dom';
 // import { withRouter } from 'react-router';
@@ -19,9 +20,9 @@ class App extends Component {
     this.refreshFeedbackData()
     // this.returnHome()
   }
-  
+
   // returnHome = () => {
-    // this.props.history.push('/')
+  //   this.props.history.push('/')
   // }
 
   // // POST request
@@ -59,6 +60,7 @@ class App extends Component {
           <Route path='/understanding' component={Understanding} />
           <Route path='/support' component={Support} />
           <Route path='/comments' component={Comments} />
+          <Route path='/success' component={Success} />
           {/* <Admin /> */}
         </Router>
         <Review />
@@ -74,4 +76,5 @@ const mapStateToProps = (reduxState) => {
   }
 }
 
+// export default connect(mapStateToProps)(App);
 export default connect(mapStateToProps)(App);
