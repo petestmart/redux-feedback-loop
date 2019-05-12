@@ -17,12 +17,12 @@ class App extends Component {
 
   componentDidMount() {
     this.refreshFeedbackData()
-    this.returnHome()
+    // this.returnHome()
   }
   
-  returnHome = () => {
+  // returnHome = () => {
     // this.props.history.push('/')
-  }
+  // }
 
   // // POST request
   // submitFeedback = (event) => {
