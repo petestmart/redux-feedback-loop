@@ -14,8 +14,12 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 class App extends Component {
 
   componentDidMount() {
-    this.refreshFeedbackData();
-    // this.props.history.push('/');
+    this.refreshFeedbackData()
+    // this.returnHome()
+  }
+  
+  returnHome = () => {
+    // this.props.history.push('/')
   }
 
   // // POST request

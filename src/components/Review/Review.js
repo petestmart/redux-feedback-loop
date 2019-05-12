@@ -7,11 +7,11 @@ class Review extends Component {
     render() {
         return (
             <div>
-            <p>Review Component Placeholder</p>
-            <p>Feeling: {this.props.reduxState.finalSubmitReducer.feelings}</p>
-            <p>Understanding:</p>
-            <p>Support:</p>
-            <p>Comments:</p>
+                <p>Review Component Placeholder</p>
+                <p>Feeling: {this.props.reduxState.finalSubmitReducer.feeling}</p>
+                <p>Understanding: {this.props.reduxState.finalSubmitReducer.understanding}</p>
+                <p>Support: {this.props.reduxState.finalSubmitReducer.support}</p>
+                <p>Comments: {this.props.reduxState.finalSubmitReducer.comments}</p>
             </div>
         )
     }
