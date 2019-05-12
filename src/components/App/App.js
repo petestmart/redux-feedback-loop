@@ -15,6 +15,11 @@ class App extends Component {
     this.refreshFeedbackData();
   }
 
+  // POST request
+  submitFeedback = (event) => {
+    axios.post('/artist', {})
+  }
+
   // GET request
   refreshFeedbackData = () => {
     axios({
@@ -24,7 +29,7 @@ class App extends Component {
       console.log(response);
       this.props.dispatch({ type: 'SET_FEEDBACK', payload: response.data })
     });
-  }
+  } // end function refreshFeedbackData
 
   render() {
     return (
