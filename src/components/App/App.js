@@ -6,7 +6,7 @@ import Feelings from '../Feelings/Feelings';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 // import Admin from '../Admin/Admin';
 
 
@@ -46,13 +46,14 @@ class App extends Component {
           <h4><i>Don't forget it!</i></h4>
         </header>
         <br />
-        <Feelings />
-        <Understanding />
-        <Support />
-        <Comments 
-          />
-        <Review />
-        {/* <Admin /> */}
+        <Router>
+          <Route exact path='/' component={Feelings} />
+          <Understanding />
+          <Support />
+          <Comments />
+          <Review />
+          {/* <Admin /> */}
+        </Router>
       </div>
     );
   }
