@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import ReviewButton from './ReviewButton/ReviewButton';
 
 
 
@@ -12,6 +13,7 @@ class Review extends Component {
                 <p>Understanding: {this.props.reduxState.finalSubmitReducer.understanding}</p>
                 <p>Support: {this.props.reduxState.finalSubmitReducer.support}</p>
                 <p>Comments: {this.props.reduxState.finalSubmitReducer.comments}</p>
+                <ReviewButton />
             </div>
         )
     }
