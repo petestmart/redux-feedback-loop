@@ -7,6 +7,7 @@ import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
 import { connect } from 'react-redux';
+import { HashRouter as Router, Route, Link } from 'react-router-dom';
 // import Admin from '../Admin/Admin';
 
 
@@ -14,6 +15,7 @@ class App extends Component {
 
   componentDidMount() {
     this.refreshFeedbackData();
+    // this.props.history.push('/');
   }
 
   // // POST request
@@ -48,12 +50,12 @@ class App extends Component {
         <br />
         <Router>
           <Route exact path='/' component={Feelings} />
-          <Understanding />
-          <Support />
-          <Comments />
-          <Review />
+          <Route path='/understanding' component={Understanding} />
+          <Route path='/support' component={Support} />
+          <Route path='/comments' component={Comments} />
           {/* <Admin /> */}
         </Router>
+        <Review />
       </div>
     );
   }

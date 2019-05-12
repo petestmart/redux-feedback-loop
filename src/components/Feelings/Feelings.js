@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import NumericInput from 'react-numeric-input';
 import { connect } from 'react-redux';
+import { HashRouter as Router, Link } from 'react-router-dom';
 
 
 class Feelings extends Component {
@@ -13,6 +14,8 @@ class Feelings extends Component {
         number.preventDefault();
         console.log('f', this.state.feeling);
         this.props.dispatch({ type: 'ADD_FEELINGS', payload: this.state.feeling })
+        this.props.history.push('/understanding');
+
     }
 
     handleChange = (event) => {
@@ -31,8 +34,11 @@ class Feelings extends Component {
                         type="number"
                         onChange={this.handleChange}
                         min="1" max="5"
-                        placeholder="1 through 5" />
-                    <button type="submit">Next</button>
+                        placeholder="1 through 5"
+                        value={this.state.text}
+                    />
+                    <button type="submit" >Next</button>
+
                 </form>
             </div>
         )

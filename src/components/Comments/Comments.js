@@ -11,7 +11,7 @@ class Comments extends Component {
         comments: ''
     }
 
-    // Add comments to feedback
+    // Add comments to finalSubmitReducer
     addFeedback = (event) => {
         event.preventDefault();
         console.log('c', this.state);
@@ -25,7 +25,7 @@ class Comments extends Component {
         console.log('in POST', this.props.reduxState.finalSubmitReducer)
         axios.post('/feedback', this.props.reduxState.finalSubmitReducer)
             .then(response => {
-                // this.props.history.push('/');
+                this.props.history.push('/');
             })
             .catch(err => {
                 alert(err)
@@ -53,8 +53,9 @@ class Comments extends Component {
                         placeholder="Comments"
                         value={this.state.text}
                     />
-                    <button type="submit"  >Submit Feedback</button>
+                    <button type="submit"  >Add Comments</button>
                 </form>
+                <br />
                 <div>
                     <button onClick={this.submitFeedback}>Confirm</button>
                 </div>
