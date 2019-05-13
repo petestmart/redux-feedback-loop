@@ -6,8 +6,8 @@ This is a single page application that displays photos from my life!  Click on a
 
 Code edited with VS Code using React.
 Node.js with Postgress and Express.
-React Numeric Input
 React Redux
+React Router
 Database built on Postico.
 
 ### Setup
@@ -37,7 +37,7 @@ Between the server and client, you'll need two terminal tabs. Because we're usin
 
 
 
-![screenshot](wireframes/ScreenShot2019-05-05at11.05.06PM.png)
+![screenshot](wireframes/ScreenShot2019-05-12at9.49.09PM.png)
 
 ### Completed Features
 - [x] Server information will save into the database
