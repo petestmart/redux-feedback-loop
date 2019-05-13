@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
-import Success from '../../Success/Success';
+// import Success from '../../Success/Success';
 import { withRouter } from "react-router-dom";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 
 
 
@@ -67,4 +67,4 @@ const mapStateToProps = (reduxState) => {
 
 // export default withRouter(connectedReview)(ReviewButton)
 
-export default connect(mapStateToProps)(ReviewButton);
+export default withRouter(connect(mapStateToProps)(ReviewButton));
