@@ -14,9 +14,13 @@ class Comments extends Component {
     // Add comments to finalSubmitReducer
     addFeedback = (event) => {
         event.preventDefault();
+        if (this.state.comments === (null || '' || "")) {
+            alert('All Fields Must Be Filled');
+        }
+        else {
         console.log('c', this.state);
         this.props.dispatch({ type: 'ADD_COMMENTS', payload: this.state.comments })
-        
+        }
     } // end function addFeedback
 
     // // trigger POST request to send all data to server

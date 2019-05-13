@@ -19,10 +19,12 @@ class App extends Component {
   componentDidMount() {
     this.refreshFeedbackData()
     // this.returnHome()
-  }
+  } // end componentDidMount
 
   // returnHome = () => {
+    
   //   this.props.history.push('/')
+    
   // }
 
   // // POST request
@@ -34,7 +36,7 @@ class App extends Component {
   //   .catch( err => {
   //     alert(err)
   //   })
-  // }
+  // }  // end submitFeedback
 
   // GET request
   refreshFeedbackData = () => {
@@ -67,14 +69,14 @@ class App extends Component {
       </div>
     );
   }
-}
+} // End class App
 
 const mapStateToProps = (reduxState) => {
   // this.props.reduxState
   return {
     reduxState
   }
-}
+} // end mapStateToProps
 
 // export default connect(mapStateToProps)(App);
 export default connect(mapStateToProps)(App);

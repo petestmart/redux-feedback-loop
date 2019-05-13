@@ -10,9 +10,14 @@ class Understanding extends Component {
 
     addUnderstanding = (number) => {
         number.preventDefault();
-        console.log('u', this.state.understanding);
-        this.props.dispatch({ type: 'ADD_UNDERSTANDING', payload: this.state.understanding })
-        this.props.history.push('/support');
+        if (this.state.understanding === (null || '' || "")) {
+            alert('All Fields Must Be Filled');
+        }
+        else {
+            console.log('u', this.state.understanding);
+            this.props.dispatch({ type: 'ADD_UNDERSTANDING', payload: this.state.understanding })
+            this.props.history.push('/support');
+        }
     }
 
     handleChange = (event) => {

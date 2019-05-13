@@ -10,9 +10,14 @@ class Support extends Component {
 
     addSupport = (number) => {
         number.preventDefault();
-        console.log('s', this.state.support);
-        this.props.dispatch({ type: 'ADD_SUPPORT', payload: this.state.support })
-        this.props.history.push('/comments');
+        if (this.state.support === (null || '' || "")) {
+            alert('All Fields Must Be Filled');
+        }
+        else {
+            console.log('s', this.state.support);
+            this.props.dispatch({ type: 'ADD_SUPPORT', payload: this.state.support })
+            this.props.history.push('/comments');
+        }
     }
 
     handleChange = (event) => {

@@ -12,10 +12,14 @@ class Feelings extends Component {
 
     addFeelings = (number) => {
         number.preventDefault();
-        console.log('f', this.state.feeling);
-        this.props.dispatch({ type: 'ADD_FEELINGS', payload: this.state.feeling })
-        this.props.history.push('/understanding');
-
+        if (this.state.feeling === (null || '' || "")) {
+            alert('All Fields Must Be Filled');
+        }
+        else {
+            console.log('f', this.state.feeling);
+            this.props.dispatch({ type: 'ADD_FEELINGS', payload: this.state.feeling })
+            this.props.history.push('/understanding');
+        }
     }
 
     handleChange = (event) => {
