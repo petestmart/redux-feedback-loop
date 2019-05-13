@@ -1,14 +1,14 @@
 # Redux Feedback Loop
 
-This is a single page application that mimics the Daily Feedback form used at Prime Academy.  Rate your overall Feeling, your Understanding of the material, how well you're feeling Support from the staff, and leave any Comments you have.  Your answers will be displayed below the form questions.  When the survey is complete, the option to "Submit" will appear and you may send in the information.  Once submitted, a Thank You page appears with the option to retake the survey.
+This is a single page application that mimics the Daily Feedback form used at Prime Academy.  Rate your overall Feeling, your Understanding of the material, how well you're feeling Support from the staff, and leave any Comments you have.  Your answers will be displayed below the form questions.  When the survey is complete, the option to "Submit" will appear, and you may send in the information.  Once submitted, a "Thank You" page appears with the option to retake the survey.
 
 ### Built With
 
-Code edited with VS Code using React.
-Node.js with Postgres and Express.
-React Redux
-React Router
-Database built on Postico.
+- Code edited with VS Code using React.
+- Node.js with Postgres and Express.
+- React Redux
+- React Router
+- Database built on Postico.
 
 ### Setup
 
@@ -50,13 +50,13 @@ Between the server and client, you'll need two terminal tabs. Because we're usin
 - [x] Add Admin Component
 
 ### Authors
-Pete St. Martin
+- Pete St. Martin
 
 ### Acknowledgements
-Dane Smith
-Chris Black
-Luke Schlangen
-Kris Szafranski
+- Dane Smith
+- Chris Black
+- Luke Schlangen
+- Kris Szafranski
 
 # Original Assignment Instructions
 
