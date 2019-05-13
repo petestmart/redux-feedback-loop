@@ -8,6 +8,7 @@ class Understanding extends Component {
         understanding: ''
     }
 
+    // Add understanding rating to finalSubmitReducer
     addUnderstanding = (number) => {
         number.preventDefault();
         if (this.state.understanding === (null || '' || "")) {
@@ -20,6 +21,7 @@ class Understanding extends Component {
         }
     }
 
+    // Handle typing changes
     handleChange = (event) => {
         console.log('understanding', event.target.value)
         this.setState({
@@ -39,13 +41,11 @@ class Understanding extends Component {
                         placeholder="1 through 5"
                         value={this.state.text}
                     />
-
                     <button type="submit" >Next</button>
-
                 </form>
             </div>
         )
     }
-}
+} // End class Understanding
 
 export default connect()(Understanding);

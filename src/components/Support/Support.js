@@ -8,6 +8,7 @@ class Support extends Component {
         support: ''
     }
 
+    // Add support rating and send to finalSubmitReducer
     addSupport = (number) => {
         number.preventDefault();
         if (this.state.support === (null || '' || "")) {
@@ -20,6 +21,7 @@ class Support extends Component {
         }
     }
 
+    // Handle typing changes
     handleChange = (event) => {
         console.log('support', event.target.value)
         this.setState({
@@ -40,9 +42,7 @@ class Support extends Component {
                         placeholder="1 through 5"
                         value={this.state.text}
                     />
-
                     <button type="submit" >Next</button>
-
                 </form>
             </div>
         )

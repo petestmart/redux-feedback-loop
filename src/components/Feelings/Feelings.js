@@ -10,6 +10,7 @@ class Feelings extends Component {
         feeling: ''
     }
 
+    // Add feelings rating and send to finalSubmitReducer
     addFeelings = (number) => {
         number.preventDefault();
         if (this.state.feeling === (null || '' || "")) {
@@ -42,11 +43,10 @@ class Feelings extends Component {
                         value={this.state.text}
                     />
                     <button type="submit" >Next</button>
-
                 </form>
             </div>
         )
     }
-}
+} // End class Feelings
 
 export default connect()(Feelings);

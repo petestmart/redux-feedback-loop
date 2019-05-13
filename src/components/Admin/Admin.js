@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+// Future component for an Admin Panel
+
 class Admin extends Component {
     render() {
         return (

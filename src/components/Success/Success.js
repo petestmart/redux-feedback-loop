@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-
+// Thank You page.  Gives user the option to retake the survey.
 class Success extends Component {
 
     newFeedback = () => {
@@ -20,7 +20,6 @@ class Success extends Component {
             </div>
         )
     }
-
-}
+}  // End class Success
 
 export default connect()(Success);

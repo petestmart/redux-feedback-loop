@@ -16,6 +16,7 @@ const initialFeedback = {
     comments: ''
 }
 
+// Reducer used in GET requests
 const feedbackReducer = (state = [], action) => {
     if (action.type === 'SET_FEEDBACK') {
         return action.payload
@@ -41,6 +42,7 @@ const finalSubmitReducer = (state = initialFeedback, action) => {
     return state;
 };
 
+// Store
 const storeInstance = createStore(
     combineReducers({
         feedbackReducer,
@@ -49,5 +51,6 @@ const storeInstance = createStore(
     applyMiddleware(logger)
 );
 
+// Connect mapStateToProps & reduxState for sending data to components
 ReactDOM.render(<Provider store={storeInstance}><App /></Provider>, document.getElementById('root'));
 registerServiceWorker();

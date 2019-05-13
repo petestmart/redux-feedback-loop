@@ -47,6 +47,7 @@ Between the server and client, you'll need two terminal tabs. Because we're usin
 
 ### Next Steps
 - [x] Prepare project for deployment
+- [x] Add Admin Component
 
 ### Authors
 Pete St. Martin

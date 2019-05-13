@@ -6,10 +6,7 @@ import { withRouter } from "react-router-dom";
 // import PropTypes from "prop-types";
 
 
-
-
 class ReviewButton extends Component {
-
 
     // trigger POST request to send all data to server
     // POST request
@@ -26,12 +23,10 @@ class ReviewButton extends Component {
     }
 
     successPage = () => {
-
         this.props.history.push('/success')
     }
 
     render() {
-
         let finSubRed = this.props.reduxState.finalSubmitReducer;
 
         if ((finSubRed.feeling &&
@@ -48,12 +43,7 @@ class ReviewButton extends Component {
             <div>
                 <button onClick={this.submitFeedback}>Confirm</button>
             </div>)
-
-
-
     }
-
-
 } // End class ReviewButton
 
 const mapStateToProps = (reduxState) => {
@@ -64,7 +54,6 @@ const mapStateToProps = (reduxState) => {
 }
 
 // const connectedReview = connect(mapStateToProps)(ReviewButton)
-
 // export default withRouter(connectedReview)(ReviewButton)
 
 export default withRouter(connect(mapStateToProps)(ReviewButton));

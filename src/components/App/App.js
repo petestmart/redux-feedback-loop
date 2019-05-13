@@ -16,16 +16,11 @@ import { HashRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
 
+  // GET request on pageload
   componentDidMount() {
     this.refreshFeedbackData()
-    // this.returnHome()
+    
   } // end componentDidMount
-
-  // returnHome = () => {
-
-  //   this.props.history.push('/')
-
-  // }
 
   // // POST request
   // submitFeedback = (event) => {
@@ -37,6 +32,7 @@ class App extends Component {
   //     alert(err)
   //   })
   // }  // end submitFeedback
+  // moved to components/Review/ReviewButton.js
 
   // GET request
   refreshFeedbackData = () => {
@@ -57,15 +53,17 @@ class App extends Component {
           <h4><i>Don't forget it!</i></h4>
         </header>
         <br />
+        {/* Changes viewpoint of the DOM based on user selections made */}
         <Router>
           <Route exact path='/' component={Feelings} />
           <Route path='/understanding' component={Understanding} />
           <Route path='/support' component={Support} />
           <Route path='/comments' component={Comments} />
           <Route path='/success' component={Success} />
+          
+          {/* Review Component displayed on the bottom of the page */}
           <Review />
         </Router>
-
       </div>
     );
   }
@@ -78,5 +76,4 @@ const mapStateToProps = (reduxState) => {
   }
 } // end mapStateToProps
 
-// export default connect(mapStateToProps)(App);
 export default connect(mapStateToProps)(App);

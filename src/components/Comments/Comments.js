@@ -35,7 +35,7 @@ class Comments extends Component {
     //             alert(err)
     //         })
     // }
-
+    // moved to components/Review/ReviewButton.js
 
     // Handle typing events
     handleChange = (event) => {
@@ -43,12 +43,11 @@ class Comments extends Component {
         this.setState({
             comments: event.target.value
         })
-    }
+    }  // End handleChange
 
 
     render() {
         return (
-
             <div>
                 <h2>Any comments you want to leave?</h2>
                 <form onSubmit={this.addFeedback}>
@@ -59,18 +58,16 @@ class Comments extends Component {
                     />
                     <button type="submit" >Add Comments</button>
                 </form>
-                <br />
-
             </div>
         );
     }
-}
+} // End class Comments
 
 const mapStateToProps = (reduxState) => {
     // this.props.reduxState
     return {
         reduxState
     }
-}
+} // End mapStateToProps
 
 export default connect(mapStateToProps)(Comments);
