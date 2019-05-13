@@ -1,6 +1,6 @@
 # Redux Feedback Loop
 
-This is a single page application that displays photos from my life!  Click on a photo to see a description.  Click the "Like" button on a photo and the number of "Likes" displayed will increase.
+This is a single page application that mimmics the Daily Feedback form used at Prime Academy.  Rate your overall Feeling, your Understanding of the material, how well you're feeling Support from the staff, and leave any Comments you have.  Your answers will be displayed below the form questions.  When the survey is complete, the option to "Submit" will appear and you may send in the information.  Once submitted, a Thank You page appears with the option to retake the survey.
 
 ### Built With
 
@@ -41,7 +41,9 @@ Between the server and client, you'll need two terminal tabs. Because we're usin
 
 ### Completed Features
 - [x] Server information will save into the database
-- [x] 'Like' counter data stores into the database
+- [x] Single page application that reveals different components using Hash Router
+- [x] Success Page brings user back to start and clears out information on the DOM
+
 
 ### Next Steps
 - [x] Prepare project for deployment
