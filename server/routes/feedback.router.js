@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
     const sqlText = `SELECT * FROM feedback ORDER BY id;`;
     pool.query(sqlText)
         .then((result) => {
-            console.log(`Back from DB:`, result );
+            console.log(`Back from DB:`, result);
             res.send(result.rows);
         })
         .catch((error) => {

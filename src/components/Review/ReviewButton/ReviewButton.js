@@ -26,7 +26,7 @@ class ReviewButton extends Component {
     }
 
     successPage = () => {
-        
+
         this.props.history.push('/success')
     }
 
@@ -43,12 +43,12 @@ class ReviewButton extends Component {
                     <button>Incomplete</button>
                 </div>)
         }
-        
-            return (
-                <div>
-                    <button onClick={this.submitFeedback}>Confirm</button>
-                </div>)
-        
+
+        return (
+            <div>
+                <button onClick={this.submitFeedback}>Confirm</button>
+            </div>)
+
 
 
     }

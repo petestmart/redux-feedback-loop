@@ -18,8 +18,8 @@ class Comments extends Component {
             alert('All Fields Must Be Filled');
         }
         else {
-        console.log('c', this.state);
-        this.props.dispatch({ type: 'ADD_COMMENTS', payload: this.state.comments })
+            console.log('c', this.state);
+            this.props.dispatch({ type: 'ADD_COMMENTS', payload: this.state.comments })
         }
     } // end function addFeedback
 
@@ -35,7 +35,7 @@ class Comments extends Component {
     //             alert(err)
     //         })
     // }
-    
+
 
     // Handle typing events
     handleChange = (event) => {
@@ -60,7 +60,7 @@ class Comments extends Component {
                     <button type="submit" >Add Comments</button>
                 </form>
                 <br />
-                
+
             </div>
         );
     }

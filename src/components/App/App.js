@@ -22,9 +22,9 @@ class App extends Component {
   } // end componentDidMount
 
   // returnHome = () => {
-    
+
   //   this.props.history.push('/')
-    
+
   // }
 
   // // POST request
@@ -65,7 +65,7 @@ class App extends Component {
           <Route path='/success' component={Success} />
           <Review />
         </Router>
-        
+
       </div>
     );
   }
